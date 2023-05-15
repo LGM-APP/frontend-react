@@ -1,0 +1,25 @@
+.bet-cart-container {
+  overflow-y: auto;
+  max-height: 555px; /* Ajustez la hauteur maximale selon vos besoins */
+}
+
+/* Pour les navigateurs WebKit (Chrome, Safari) */
+.bet-cart-container::-webkit-scrollbar {
+    width: 4px; /* Largeur de la barre de défilement */
+  }
+  
+  .bet-cart-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Couleur de fond de la piste de la barre de défilement */
+  }
+  
+  .bet-cart-container::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur de la poignée de la barre de défilement */
+    border-radius: 4px; /* Bordure arrondie de la poignée de la barre de défilement */
+  }
+  
+  /* Pour les autres navigateurs (Firefox) */
+  .bet-cart-container {
+    scrollbar-width: thin; /* Largeur de la barre de défilement */
+    scrollbar-color: #888 #f1f1f1; /* Couleur de la poignée et de la piste de la barre de défilement */
+  }
+  
