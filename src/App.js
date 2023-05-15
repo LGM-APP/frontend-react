@@ -5,9 +5,9 @@ import Sidebar from "./components/sidebar/Sidebar";
 
 export default function App() {
   return (
-    <div className="App bg-gray-100">
+    <div className="App bg-gray-200">
       <Navbar />
-        <div className="flex-grow flex">
+        <div className="grid grid-cols-[1fr_3fr_1fr]">
         <Sidebar />
         <Betlist />
         <Cart />

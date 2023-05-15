@@ -29,12 +29,12 @@ const Betlist = () => {
   };
 
   return (
-    <div className="betting-area border-2 border-violet-700 flex-auto rounded m-6 p-4">
+    <div className="bg-white betting-area border-2 border-violet-700 flex-auto rounded m-6 p-4">
       <h2 className="text-lg font-semibold">Paris en cours</h2>
       {matches.map((match, index) => (
         <div className="match-card py-1" key={index}>
-          <div className="w-auto rounded-lg shadow-lg border-2 border-yellow-500 bg-white p-4 flex justify-around">
-            <div className="flex items-start">
+          <div className="w-auto rounded-lg shadow-lg border-2 border-yellow-500 bg-white p-4 grid grid-cols-3 justify-center items-center">
+            <div className="flex items-start border-2 border-green-500">
               <div className="w-32 h-32 border-2 border-pink-400 bg-cover bg-no-repeat bg-center mr-2">
                 <img
                   src={KarmineCorpLogo}
@@ -42,29 +42,36 @@ const Betlist = () => {
                   className="w-full h-full"
                 />
               </div>
-              <div className="flex flex-col justify-between">
+              <div className="flex flex-col border-2 border-amber-900 justify-between">
                 <p className="text-lg text-start font-bold">{match.team1}</p>
-                <div>
-                  <p
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-semibold p-1 rounded text-center cursor-pointer"
-                    onClick={() => handleAddBet(match.team1, match.odds1)}
-                  >
-                    Cote: {match.odds1}
-                  </p>
-                </div>
+                Cote: {match.odds1}
               </div>
             </div>
-            <div className="flex items-start">
-              <div>
-                <p className="text-lg text-right font-bold">{match.team2}</p>
-                <div className="flex flex-col justify-between">
-                  <p
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-semibold p-1 rounded text-center cursor-pointer"
-                    onClick={() => handleAddBet(match.team2, match.odds2)}
-                  >
-                    Cote: {match.odds2}
-                  </p>
-                </div>
+
+            <div className="flex flex-col items-center border-2 border-indigo-600">
+              <p className="text-3xl font-bold">VALORANT</p>
+              <p className="text-sm font-semibold p-2">Champions Tour 2023: EMEA League</p>
+
+              <div className="flex items-center border-2 border-indigo-600">
+                <p
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-semibold p-1 rounded text-center cursor-pointer"
+                  onClick={() => handleAddBet(match.team1, match.odds1)}
+                >
+                  Cote: {match.odds1}
+                </p>
+                <p className=" text-3xl font-bold p-2">VS</p>
+                <p
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-semibold p-1 rounded text-center cursor-pointer"
+                  onClick={() => handleAddBet(match.team2, match.odds2)}
+                >
+                  Cote: {match.odds2}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start border-2 border-lime-400 justify-end">
+              <div className="text-right">
+                <p className="text-lg font-bold">{match.team2}</p>
+                Cote: {match.odds2}
               </div>
               <div className="w-32 h-32 border-2 border-orange-400 bg-cover bg-no-repeat bg-center ml-2">
                 <img
