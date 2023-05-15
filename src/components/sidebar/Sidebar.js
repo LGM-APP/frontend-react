@@ -29,12 +29,12 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="border border-violet-950 sticky top-2 h-full p-4 rounded m-3">
-      <h2 className="text-lg font-semibold">Sports et Compétitions</h2>
+    <div className="border border-violet-950 sticky top-2 h-full p-4 rounded m-6">
+      <h2 className="text-lg font-semibold pb-2">Sports et Compétitions</h2>
       <ul>
         {games.map((game, index) => (
-          <li key={index}>
-            <a
+          <li className="py-1" key={index}>
+            <a className="flex border-2 bg-slate-200 rounded-md shadow-sm items-center py-2 pl-1"
               href={"/" + game.name.toLowerCase()}
               onClick={(event) => {
                 event.preventDefault();
@@ -45,9 +45,9 @@ const Sidebar = () => {
               <span className="ml-1">{game.name}</span>
             </a>
             {activeGames.includes(index) && (
-              <ul>
+              <ul className=" pl-8">
                 {game.competitions.map((competition, i) => (
-                  <li key={i}>{competition}</li>
+                  <li className=" py-1" key={i}>{competition}</li>
                 ))}
               </ul>
             )}
