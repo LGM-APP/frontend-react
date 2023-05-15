@@ -1,12 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom";
 import './index.css';
-import App from './App';
+import App from "./App";
+import { BetProvider } from "../src/components/BetContext";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <BetProvider>
+      <App />
+    </BetProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
