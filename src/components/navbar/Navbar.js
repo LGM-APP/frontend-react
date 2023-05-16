@@ -7,11 +7,12 @@ import {
   faPeopleGroup,
   faTrophy,
   faStarHalfStroke,
+  faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
+import {  Link  } from "react-router-dom";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
-
   // Replace # paths with your paths
   const navigation = [
     { title: "Équipes", path: "#", icon: faPeopleGroup },
@@ -19,8 +20,8 @@ const Navbar = () => {
     { title: "Suivis", path: "#", icon: faStarHalfStroke },
     { title: "Mini-jeux", path: "#", icon: faPuzzlePiece },
   ];
+  const logo = process.env.PUBLIC_URL + '/logo.png';
 
-const logo = process.env.PUBLIC_URL + '/logo.png';
   useEffect(() => {
     document.onclick = (e) => {
       const target = e.target;
@@ -101,16 +102,20 @@ const logo = process.env.PUBLIC_URL + '/logo.png';
             })}
           </ul>
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
-            <a href="/" className="block text-gray-700 hover:text-gray-900">
+            <Link
+                to="/signin"
+                className="flex items-center text-gray-700 hover:text-gray-900"
+            >
+              <FontAwesomeIcon className="pr-1" icon={faUserPlus} />
               Inscription
-            </a>
-            <a
-              href="/"
-              className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+            </Link>
+            <Link
+                to="/login"
+                className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
             >
               Connexion
               <FontAwesomeIcon icon={faAngleRight} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
