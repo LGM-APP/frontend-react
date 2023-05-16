@@ -106,7 +106,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/login"
-              className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+              className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-cyan-900 hover:bg-cyan-700 active:bg-cyan-950 rounded-full md:inline-flex"
             >
               Connexion
               <FontAwesomeIcon icon={faAngleRight} />

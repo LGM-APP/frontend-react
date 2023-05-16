@@ -17,7 +17,7 @@ const Login = () => {
               Vous n'avez pas encore de compte ?
               <a
                 href="/signin"
-                className="font-medium text-indigo-600 hover:text-indigo-500 pl-1"
+                className="font-medium text-cyan-950 hover:text-cyan-800 pl-1"
               >
                 Inscrivez-vous
               </a>
@@ -30,7 +30,7 @@ const Login = () => {
             <input
               type="email"
               required
-              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:text-cyan-950 shadow-sm rounded-lg"
               autoComplete="email" // Ajout de l'attribut autocomplete pour l'email
             />
           </div>
@@ -39,11 +39,11 @@ const Login = () => {
             <input
               type="password"
               required
-              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:text-cyan-950 shadow-sm rounded-lg"
               autoComplete="current-password" // Ajout de l'attribut autocomplete pour le mot de passe
             />
           </div>
-          <button className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
+          <button className="w-full px-4 py-2 text-white font-medium bg-cyan-950 hover:bg-cyan-800 active:text-cyan-950 rounded-lg duration-150">
             Connexion
           </button>
         </form>
