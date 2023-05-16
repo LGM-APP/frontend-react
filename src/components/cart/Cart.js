@@ -7,7 +7,7 @@ import { BetContext } from "../BetContext";
 const Cart = () => {
   const { bets, totalOdds, setBets, setTotalOdds } = useContext(BetContext);
   const [stake, setStake] = useState(0);
-  const [,setCartEmpty] = useState(true);
+  const [, setCartEmpty] = useState(true);
 
   const handleAddBet = (team, odds) => {
     const newBet = { team, odds };

@@ -50,7 +50,9 @@ const Betlist = () => {
 
             <div className="flex flex-col items-center border-2 border-indigo-600">
               <p className="text-3xl font-bold">VALORANT</p>
-              <p className="text-sm font-semibold p-2">Champions Tour 2023: EMEA League</p>
+              <p className="text-sm font-semibold p-2">
+                Champions Tour 2023: EMEA League
+              </p>
 
               <div className="flex items-center border-2 border-indigo-600">
                 <p

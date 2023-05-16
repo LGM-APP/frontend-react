@@ -7,13 +7,13 @@ const Sidebar = () => {
     {
       name: "League of Legends",
       icon: faChessRook,
-      competitions: ["Competition 1", "Competition 2", "Competition 3"]
+      competitions: ["Competition 1", "Competition 2", "Competition 3"],
     },
     {
       name: "Valorant",
       icon: faGun,
-      competitions: ["Competition 4", "Competition 5", "Competition 6"]
-    }
+      competitions: ["Competition 4", "Competition 5", "Competition 6"],
+    },
   ];
 
   const [activeGames, setActiveGames] = useState([]);
@@ -34,7 +34,8 @@ const Sidebar = () => {
       <ul>
         {games.map((game, index) => (
           <li className="py-1" key={index}>
-            <a className="flex border-2 bg-slate-200 rounded-md shadow-sm items-center py-2 pl-1"
+            <a
+              className="flex border-2 bg-slate-200 rounded-md shadow-sm items-center py-2 pl-1"
               href={"/" + game.name.toLowerCase()}
               onClick={(event) => {
                 event.preventDefault();
@@ -47,7 +48,9 @@ const Sidebar = () => {
             {activeGames.includes(index) && (
               <ul className=" pl-8">
                 {game.competitions.map((competition, i) => (
-                  <li className=" py-1" key={i}>{competition}</li>
+                  <li className=" py-1" key={i}>
+                    {competition}
+                  </li>
                 ))}
               </ul>
             )}

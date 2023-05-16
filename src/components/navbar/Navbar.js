@@ -9,7 +9,7 @@ import {
   faStarHalfStroke,
   faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
-import {  Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
@@ -20,7 +20,7 @@ const Navbar = () => {
     { title: "Suivis", path: "#", icon: faStarHalfStroke },
     { title: "Mini-jeux", path: "#", icon: faPuzzlePiece },
   ];
-  const logo = process.env.PUBLIC_URL + '/logo.png';
+  const logo = process.env.PUBLIC_URL + "/logo.png";
 
   useEffect(() => {
     document.onclick = (e) => {
@@ -40,12 +40,7 @@ const Navbar = () => {
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
         <div className="flex items-center justify-between py-5 md:block">
           <a href="/">
-            <img
-              src={logo}
-              width={70}
-              alt="LGM logo"
-            />
-
+            <img src={logo} width={70} alt="LGM logo" />
           </a>
           <div className="md:hidden">
             <button
@@ -103,15 +98,15 @@ const Navbar = () => {
           </ul>
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
             <Link
-                to="/signin"
-                className="flex items-center text-gray-700 hover:text-gray-900"
+              to="/signin"
+              className="flex items-center text-gray-700 hover:text-gray-900"
             >
               <FontAwesomeIcon className="pr-1" icon={faUserPlus} />
               Inscription
             </Link>
             <Link
-                to="/login"
-                className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+              to="/login"
+              className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
             >
               Connexion
               <FontAwesomeIcon icon={faAngleRight} />
