@@ -29,13 +29,13 @@ const Betlist = () => {
   };
 
   return (
-    <div className="bg-white betting-area border-2 border-violet-700 flex-auto rounded m-6 p-4">
+    <div className="bg-white betting-area border-2 border-violet-700 flex-auto rounded p-4">
       <h2 className="text-lg font-semibold">Paris en cours</h2>
       {matches.map((match, index) => (
         <div className="match-card py-1" key={index}>
           <div className="w-auto rounded-lg shadow-lg border-2 border-yellow-500 bg-white p-4 grid grid-cols-3 justify-center items-center">
             <div className="flex items-start border-2 border-green-500">
-              <div className="w-32 h-32 border-2 border-pink-400 bg-cover bg-no-repeat bg-center mr-2">
+              <div className="w-1/2 border-2 border-pink-400 bg-cover bg-no-repeat bg-center mr-2">
                 <img
                   src={KarmineCorpLogo}
                   alt="Logo Karmine Corp"
@@ -49,8 +49,8 @@ const Betlist = () => {
             </div>
 
             <div className="flex flex-col items-center border-2 border-indigo-600">
-              <p className="text-3xl font-bold">VALORANT</p>
-              <p className="text-sm font-semibold p-2">
+              <p className="text-xl font-bold">VALORANT</p>
+              <p className="text-sm font-semibold p-2 text-center">
                 Champions Tour 2023: EMEA League
               </p>
 
@@ -75,7 +75,7 @@ const Betlist = () => {
                 <p className="text-lg font-bold">{match.team2}</p>
                 Cote: {match.odds2}
               </div>
-              <div className="w-32 h-32 border-2 border-orange-400 bg-cover bg-no-repeat bg-center ml-2">
+              <div className="w-2/5 border-2 border-orange-400 bg-cover bg-no-repeat bg-center ml-2">
                 <img
                   src={TeamVitalityLogo}
                   alt="Logo Team Vitality"

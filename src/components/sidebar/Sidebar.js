@@ -29,7 +29,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen border border-violet-950 sticky top-2 self-start p-4 rounded m-6">
+    <div className="bg-white min-h-screen border border-violet-950 sticky top-2 self-start p-4 rounded">
       <h2 className="text-lg font-semibold pb-2">Sports et Compétitions</h2>
       <ul>
         {games.map((game, index) => (

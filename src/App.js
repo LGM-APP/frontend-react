@@ -22,7 +22,7 @@ export default function App() {
                   <Route
                     index
                     element={
-                      <div className="grid grid-cols-[1fr_3fr_1fr]">
+                      <div className="grid grid-cols-[1fr_3fr_1fr] m-6 gap-5">
                         <Sidebar />
                         <Betlist />
                         <Cart />
