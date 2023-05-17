@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-gray-200 border border-lime-600 md:text-l ${
+      className={`bg-gray-200 border-b border-cyan-950 md:text-l ${
         state
           ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
           : ""

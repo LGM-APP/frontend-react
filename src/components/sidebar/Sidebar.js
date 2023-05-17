@@ -29,13 +29,13 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen border border-violet-950 sticky top-2 self-start p-4 rounded">
+    <div className="bg-white min-h-screen border border-cyan-950 sticky top-2 self-start p-4 rounded">
       <h2 className="text-lg font-semibold pb-2">Sports et Compétitions</h2>
       <ul>
         {games.map((game, index) => (
           <li className="py-1" key={index}>
             <a
-              className="flex border-2 bg-slate-200 rounded-md shadow-sm items-center py-2 pl-1"
+              className="flex   bg-slate-200 rounded-md shadow-sm items-center py-2 pl-1"
               href={"/" + game.name.toLowerCase()}
               onClick={(event) => {
                 event.preventDefault();
