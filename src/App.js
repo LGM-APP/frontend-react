@@ -15,7 +15,7 @@ export default function App() {
             <Router>
                 <Routes>
                     <Route path="/login" element={<Login/>}/>
-                    <Route path="/register" element={<Signin/>}/>
+                    <Route path="/signin" element={<Signin/>}/>
                     <Route path="/logout" element={<Logout/>}/>
                     <Route
                         path="*"
