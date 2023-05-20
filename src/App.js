@@ -3,8 +3,10 @@ import Betlist from "./components/betlist/Betlist";
 import Cart from "./components/cart/Cart";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
-import Login from "./components/login/Login";
-import Signin from "./components/signin/Signin";
+import Login from "./components/authentication/login/Login";
+import Signin from "./components/authentication/signin/Signin";
+import Logout from "./components/authentication/logout/Logout";
+import React from "react";
 
 export default function App() {
   return (

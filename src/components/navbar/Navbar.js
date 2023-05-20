@@ -1,26 +1,26 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {useEffect, useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
-  faAngleRight,
-  faPuzzlePiece,
-  faPeopleGroup,
-  faTrophy,
-  faStarHalfStroke,
-  faUserPlus,
+    faAngleRight,
+    faPuzzlePiece,
+    faPeopleGroup,
+    faTrophy,
+    faStarHalfStroke,
+    faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [state, setState] = useState(false);
-  // Replace # paths with your paths
-  const navigation = [
-    { title: "Équipes", path: "#", icon: faPeopleGroup },
-    { title: "Compétition", path: "#", icon: faTrophy },
-    { title: "Suivis", path: "#", icon: faStarHalfStroke },
-    { title: "Mini-jeux", path: "#", icon: faPuzzlePiece },
-  ];
-  const logo = process.env.PUBLIC_URL + "/logo.png";
+    const [state, setState] = useState(false);
+    // Replace # paths with your paths
+    const navigation = [
+        {title: "Équipes", path: "#", icon: faPeopleGroup},
+        {title: "Compétition", path: "#", icon: faTrophy},
+        {title: "Suivis", path: "#", icon: faStarHalfStroke},
+        {title: "Mini-jeux", path: "#", icon: faPuzzlePiece},
+    ];
+    const logo = process.env.PUBLIC_URL + "/logo.png";
 
   useEffect(() => {
     document.onclick = (e) => {
@@ -113,9 +113,10 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-      </div>
-    </nav>
-  );
+</div>
+</nav>
+)
+    ;
 };
 
 export default Navbar;
