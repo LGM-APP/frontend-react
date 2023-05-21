@@ -11,7 +11,7 @@ import React from "react";
 export default function App() {
 
     return (
-        <div className="App bg-gray-200">
+        <div className="App bg-gray-200 min-h-screen">
             <Router>
                 <Routes>
                     <Route path="/login" element={<Login/>}/>
