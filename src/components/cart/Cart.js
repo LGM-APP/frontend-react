@@ -47,7 +47,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen sticky top-2 self-start items-start p-4 mt-24 rounded border border-cyan-900">
+    <div className="bg-white min-h-screen sticky top-2 self-start items-start p-4 rounded border border-cyan-900">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold">Panier de paris</h2>
         <button

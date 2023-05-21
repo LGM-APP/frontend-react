@@ -34,7 +34,7 @@ const Betlist = () => {
     };
 
     return (
-        <div className="bg-white betting-area border border-cyan-950 flex-auto rounded p-4 mt-24">
+        <div className="bg-white betting-area border border-cyan-950 flex-auto rounded p-4">
             <h2 className="text-lg font-semibold">Paris en cours</h2>
             {matches.map((match, index) => (
                 <div className="match-card py-1" key={index}>

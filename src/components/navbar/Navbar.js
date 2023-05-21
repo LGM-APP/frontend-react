@@ -50,7 +50,7 @@ const Navbar = () => {
 				state
 					? "shadow-lg border md:shadow-none md:border-none md:mx-2 md:mt-0"
 					: ""
-			} w-full fixed top-0 z-50`}
+			} w-full top-0 z-50`}
 		>
 			<div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
 				<div className="flex items-center justify-between py-5 md:block">

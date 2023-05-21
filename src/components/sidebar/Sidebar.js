@@ -64,7 +64,7 @@ const Sidebar = () => {
 
 	if (loading) {
 		return (
-			<div className="bg-white min-h-screen border border-cyan-950 sticky top-2 self-start p-4 mt-24 rounded">
+			<div className="bg-white min-h-screen border border-cyan-950 sticky top-2 self-start p-4 rounded">
 				<h2 className="text-lg font-semibold pb-2">
 					Sports et Compétitions
 				</h2>
@@ -73,7 +73,7 @@ const Sidebar = () => {
 		);
 	} else {
 		return (
-			<div className="bg-white min-h-screen border border-cyan-950 sticky top-2 self-start p-4 mt-24 rounded">
+			<div className="bg-white min-h-screen border border-cyan-950 sticky top-2 self-start p-4 rounded">
 				<h2 className="text-lg font-semibold pb-2">
 					Sports et Compétitions
 				</h2>
