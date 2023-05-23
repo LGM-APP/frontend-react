@@ -11,13 +11,8 @@ const Betlist = () => {
 	const [currentPage, setCurrentPage] = useState(1);
 
 	const matches = [
-		{
-			team1: "Karmine Corp",
-			team2: "Team Vitality",
-			odds1: 10.5,
-			odds2: 2.0,
-		},
 		{ team1: "G2 Esports", team2: "Fnatic", odds1: 1.8, odds2: 2.2 },
+		{ team1: "G2 Esports", team2: "OG", odds1: 1.8, odds2: 4.2 },
 		{ team1: "Team Liquid", team2: "Cloud9", odds1: 200.5, odds2: 200.0 },
 		{ team1: "Natus Vincere", team2: "Astralis", odds1: 1.7, odds2: 12.3 },
 		{ team1: "Evil Geniuses", team2: "OG", odds1: 2.1, odds2: 1.9 },
