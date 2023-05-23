@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./cart.css";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { BetContext } from "../BetContext";
+import { BetContext } from "../../BetContext";
+import "./cart.css";
 
 const Cart = () => {
   const { bets, totalOdds, setBets, setTotalOdds } = useContext(BetContext);

@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import KarmineCorpLogo from "./Karmine_Corp_logo.png";
 import TeamVitalityLogo from "./Team_Vitality_logo.png";
-import { BetContext } from "../BetContext";
-import Pagination from "../pagination/Pagination"; // Import du composant de pagination
+import { BetContext } from "../../BetContext";
+import Pagination from "../../pagination/Pagination"; // Import du composant de pagination
 
 const ITEMS_PER_PAGE = 2; // Nombre d'éléments à afficher par page
 

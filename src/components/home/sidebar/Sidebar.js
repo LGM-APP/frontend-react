@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { faChessRook, faGun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { series_service } from "../../services/series.service";
-import Loader from "../loader/Loader";
-import { truncateText } from "../../utils/utils";
+import { series_service } from "../../../services/series.service";
+import Loader from "../../loader/Loader";
+import { truncateText } from "../../../utils/utils";
 
 const Sidebar = () => {
 	const [loading, setLoading] = useState(true);
