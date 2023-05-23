@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { faChessRook, faGun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { series_service } from "../../services/series.service";
-import Loader from "./loader/Loader";
+import Loader from "../loader/Loader";
+import { truncateText } from "../../utils/utils";
 
 const Sidebar = () => {
 	const [loading, setLoading] = useState(true);
@@ -29,7 +30,7 @@ const Sidebar = () => {
 			series_service
 				.getSerieByGame(game.name)
 				.then((response) => {
-					const data = response.data.slice(-5);
+					const data = response.data.slice(-6);
 					game.series.push(data);
 				})
 				.catch((error) => {
@@ -68,7 +69,7 @@ const Sidebar = () => {
 				<h2 className="text-lg font-semibold pb-2">
 					Sports et Compétitions
 				</h2>
-        <Loader />
+				<Loader />
 			</div>
 		);
 	} else {
@@ -101,10 +102,21 @@ const Sidebar = () => {
 												className="border-b-2 border-cyan-950 hover:border-cyan-600 pt-2 pb-2"
 												key={index}
 											>
-												<a className="pb-2" href="/">
-													{serie["leagueId"]["name"] +
+												<a
+													title={
+														serie["leagueId"]["name"] +
 														" : " +
-														serie["fullName"]}
+														serie["fullName"]
+													}
+													className="pb-2"
+													href="/"
+												>
+													{truncateText(
+														serie["leagueId"]["name"] +
+															" : " +
+															serie["fullName"],
+														38
+													)}
 												</a>
 											</li>
 										);
