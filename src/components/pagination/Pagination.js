@@ -17,11 +17,14 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
 	const getPageNumbers = () => {
 		const pageNumbers = [];
-		let startPage = Math.max(2, currentPage - Math.floor(MAX_PAGE_NUMBERS / 2));
+		let startPage = Math.max(
+			2,
+			currentPage - Math.floor(MAX_PAGE_NUMBERS / 2)
+		);
 		let endPage = Math.min(startPage + MAX_PAGE_NUMBERS - 3, totalPages - 1);
 
 		if (startPage > 2) {
-			pageNumbers.push('...');
+			pageNumbers.push("...");
 		}
 
 		for (let i = startPage; i <= endPage; i++) {
@@ -29,11 +32,15 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 		}
 
 		if (endPage < totalPages - 1) {
-			pageNumbers.push('...');
+			pageNumbers.push("...");
 		}
 
 		return [1, ...pageNumbers, totalPages];
 	};
+
+	if (totalPages <= 1) {
+		return null; // Ne rien rendre si le nombre de pages est inférieur ou égal à zéro
+	}
 
 	return (
 		<div className="max-w-screen-xl mx-auto mt-12 px-4 text-gray-600 md:px-8">
@@ -68,7 +75,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 					</li>
 					{getPageNumbers().map((pageNumber, index) => (
 						<li key={index}>
-							{pageNumber === '...' ? (
+							{pageNumber === "..." ? (
 								<span className="px-4 py-3 border border-l-0">...</span>
 							) : (
 								<button
