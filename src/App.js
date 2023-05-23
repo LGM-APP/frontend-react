@@ -7,39 +7,39 @@ import Login from "./components/authentication/login/Login";
 import Signin from "./components/authentication/signin/Signin";
 import Logout from "./components/authentication/logout/Logout";
 import React from "react";
+import Complist from "./components/competitions/Complist";
 
 export default function App() {
-
-    return (
-        <div className="App bg-gray-200">
-            <Router>
-                <Routes>
-                    <Route path="/login" element={<Login/>}/>
-                    <Route path="/signin" element={<Signin/>}/>
-                    <Route path="/logout" element={<Logout/>}/>
-                    <Route
-                        path="*"
-                        element={
-                            <>
-                                <Navbar />
-                                <Routes>
-                                    <Route
-                                        index
-                                        element={
-                                            <div className="grid grid-cols-[1fr_3fr_1fr] m-6 gap-5">
-                                                <Sidebar />
-                                                <Betlist />
-                                                <Cart />
-                                            </div>
-                                        }
-                                    />
-                                    {/*Ajoutez ici d'autres routes qui doivent inclure la Navbar*/}
-                                </Routes>
-                            </>
-                        }
-                    />
-                </Routes>
-            </Router>
-        </div>
-    );
+	return (
+		<div className="App bg-gray-200">
+			<Router>
+				<Routes>
+					<Route path="/login" element={<Login />} />
+					<Route path="/signin" element={<Signin />} />
+					<Route path="/logout" element={<Logout />} />
+					<Route
+						path="*"
+						element={
+							<>
+								<Navbar />
+								<Routes>
+									<Route
+										index
+										element={
+											<div className="grid grid-cols-[1fr_3fr_1fr] m-6 gap-5">
+												<Sidebar />
+												<Betlist />
+												<Cart />
+											</div>
+										}
+									/>
+									<Route path="/competitions" element={<Complist />} />
+								</Routes>
+							</>
+						}
+					/>
+				</Routes>
+			</Router>
+		</div>
+	);
 }
