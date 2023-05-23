@@ -43,12 +43,12 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 	}
 
 	return (
-		<div className="max-w-screen-xl mx-auto mt-12 px-4 text-gray-600 md:px-8">
+		<div className="max-w-screen-xl mx-auto mt-12 px-2 text-gray-600 md:px-8">
 			<div className="hidden justify-center sm:flex" aria-label="Pagination">
 				<ul className="flex items-center">
 					<li>
 						<button
-							className={`hover:text-cyan-950 hover:bg-gray-100 px-2 py-3 border border-r-0 rounded-tl-lg rounded-bl-lg ${
+							className={`hover:text-cyan-950 hover:bg-gray-100 px-2 py-2.5 border rounded-tl-lg rounded-bl-lg ${
 								currentPage === 1
 									? "pointer-events-none opacity-50"
 									: ""
