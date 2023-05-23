@@ -2,22 +2,14 @@ import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { BetContext } from "../../BetContext";
+import Popup from "./components/Popup";
 import "./cart.css";
 
 const Cart = () => {
   const { bets, totalOdds, setBets, setTotalOdds } = useContext(BetContext);
   const [stake, setStake] = useState(0);
   const [, setCartEmpty] = useState(true);
-
-  const handleAddBet = (team, odds) => {
-    const newBet = { team, odds };
-    const newBets = [...bets, newBet];
-    setBets(newBets);
-    setCartEmpty(false);
-
-    const newTotalOdds = totalOdds + odds;
-    setTotalOdds(newTotalOdds);
-  };
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
 
   const handleRemoveBet = (index, odds) => {
     const newBets = [...bets];
@@ -44,6 +36,19 @@ const Cart = () => {
 
   const calculatePotentialGain = () => {
     return stake * totalOdds;
+  };
+
+  const openConfirmationPopup = () => {
+    setIsConfirmationOpen(true);
+  };
+
+  const handleConfirmAddBet = () => {
+    handleClearCart();
+    setIsConfirmationOpen(false);
+  };
+
+  const handleCancelAddBet = () => {
+    setIsConfirmationOpen(false);
   };
 
   return (
@@ -91,10 +96,18 @@ const Cart = () => {
       </div>
       <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-        onClick={() => handleAddBet("Team X", 2.5)}
+        onClick={openConfirmationPopup}
       >
-        Ajouter un pari
+        Valider le panier
       </button>
+      {isConfirmationOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <Popup
+            onConfirm={handleConfirmAddBet}
+            onCancel={handleCancelAddBet}
+          />
+        </div>
+      )}
     </div>
   );
 };
