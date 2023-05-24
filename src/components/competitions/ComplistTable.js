@@ -40,21 +40,21 @@ const ComplistTable = ({ tableItems }) => {
 	}
 
 	return (
-		<div className="mt-8 bg-gray-50 shadow-sm rounded-lg overflow-x-auto">
-			<table className="w-full table-auto text-sm text-left">
+		<div className="mt-8 bg-gray-50 w-screen border border-black shadow-sm rounded-lg overflow-x-auto">
+			<table className="w-full table-fixed text-sm text-left">
 				<thead className="text-gray-600 font-medium border-b">
 					<tr>
-						<th className="py-3 px-6">Compétition</th>
-						<th className="py-3 px-6">Split</th>
-						<th className="py-3 px-6">Format</th>
-						<th className="py-3 px-6">Statut</th>
+						<th className="py-3 px-6 w-1/4">Compétition</th>
+						<th className="py-3 px-6 w-1/3">Split</th>
+						<th className="py-3 px-6 w-1/6">Format</th>
+						<th className="py-3 px-6 w-1/5">Statut</th>
 					</tr>
 				</thead>
 				<tbody className="text-gray-600 divide-y space-y-4">
 					{currentItems.map((item, idx) => (
 						<tr key={idx}>
 							<td className="flex items-center gap-x-2 py-3 px-4">
-								<div className="w-[20%] border-pink-400 mr-2">
+								<div className="w-[10vh] flex items-center aspect-[4/3] object-contain border-pink-400 mr-2">
 									<img
 										src={item["serie"]["leagueId"]["imageUrl"]}
 										alt="serie logo"
@@ -70,7 +70,7 @@ const ComplistTable = ({ tableItems }) => {
 								</div>
 							</td>
 							<td className="px-8 py-4 whitespace-nowrap">
-								{truncateText(item["serie"]["fullName"], 25)}
+								{item["serie"]["fullName"]}
 							</td>
 							<td className="px-8 py-4 whitespace-nowrap">
 								{truncateText(item.name, 20)}
