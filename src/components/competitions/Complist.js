@@ -25,7 +25,7 @@ const Complist = () => {
 		fetchTournaments();
 	}, []);
 	return (
-		<div className="flex flex-col m-auto w-[55%] mt-6">
+		<div className="flex flex-col min-h-screen m-auto lg:w-[80%] xl:w-[70%] md:w-[91%] sm:w-full mt-6">
 			<h2 className="text-gray-800 font-bold text-4xl">Compétitions</h2>
 			<div className="flex justify-center px-4 pb-4 gap-x-[6vh] ">
 				<ComplistTable tableItems={tableItems} />

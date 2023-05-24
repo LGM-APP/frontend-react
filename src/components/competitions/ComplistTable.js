@@ -18,7 +18,7 @@ const ComplistTable = ({ tableItems }) => {
 	if (tableItems.length === 0) {
 		return (
 			<div className="mt-8 w-full bg-gray-50 shadow-sm rounded-lg overflow-x-auto">
-				<table className="w-full table-auto text-sm text-left">
+				<table className="w-full table-auto text-lg text-left">
 					<thead className="text-gray-600 font-medium border-b">
 						<tr>
 							<th className="py-3 px-6">Compétition</th>
