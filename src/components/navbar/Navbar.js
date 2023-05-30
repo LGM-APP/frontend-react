@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { auth_service } from "../../services/auth.service";
+import { user_service } from "../../services/user.service";
 
 const Navbar = () => {
 	const [state, setState] = useState(false);
@@ -29,6 +30,30 @@ const Navbar = () => {
 	];
 	const isAuthenticated = auth_service.is_logged();
 
+	const [userData, setUserData] = useState(null);
+
+	useEffect(() => {
+		const fetchUserData = async () => {
+			try {
+				const data = await user_service.getUserData();
+				setUserData(data);
+			} catch (error) {
+				// Gérer l'erreur de récupération des données utilisateur
+				console.error(
+					"Erreur lors de la récupération des données utilisateur :",
+					error
+				);
+			}
+		};
+
+		fetchUserData();
+	}, []);
+
+	const userDisplayName = userData
+		? `${userData.firstName} ${userData.lastName}`
+		: "Nom utilisateur";
+	const userPoints = userData ? userData.point : "points";
+
 	useEffect(() => {
 		const handleClickOutside = (e) => {
 			if (profileRef.current && !profileRef.current.contains(e.target)) {
@@ -40,9 +65,6 @@ const Navbar = () => {
 			document.removeEventListener("click", handleClickOutside);
 		};
 	}, []);
-
-	const userDisplayName = "Nom utilisateur";
-	const userPoints = "points";
 
 	return (
 		<nav
