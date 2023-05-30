@@ -65,10 +65,10 @@ const TeamList = () => {
 					<tbody className="grid grid-cols-3 gap-5 p-8 divide-y">
 						{teamData.map((team) => (
 							<tr key={team.id}>
-								<td>
+								<td className="flex gap-x-2 border-2 bg-slate-200 border-green-950 py-3 px-4 rounded">
 									<Link
 										to={`/team/${team.id}`}
-										className="flex items-center gap-x-2 border-2 bg-slate-200 border-green-950 py-3 px-4 rounded"
+										className="flex items-center"
 									>
 										<div className="max-w-[10vh] flex items-center aspect-[4/3] object-contain mr-2">
 											<img src={team.imageUrl} alt="serie logo" />
