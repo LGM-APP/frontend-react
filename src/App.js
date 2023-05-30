@@ -9,6 +9,7 @@ import Logout from "./components/authentication/logout/Logout";
 import Complist from "./components/competitions/Complist";
 import Homepage from "./components/home/Homepage";
 import TeamList from "./components/teams/teamlist/Teamlist";
+import Teamdetails from "./components/teams/teamdetails/Teamdetails";
 
 
 
@@ -37,6 +38,7 @@ export default function App() {
 									/>
 									<Route path="/competitions" element={<Complist />} />
 									<Route path="/teams" element={<TeamList />} />
+									<Route path="/team/:id" element={<Teamdetails />} />
 								</Routes>
 							</>
 						}

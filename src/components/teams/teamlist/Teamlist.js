@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { team_service } from "../../../services/teams.service";
 import Pagination from "../../pagination/Pagination";
 import Loader from "../../loader/Loader";
+import { Link } from "react-router-dom";
 
 const TeamList = () => {
 	const [teamData, setTeamData] = useState([]);
@@ -41,8 +42,12 @@ const TeamList = () => {
 				</h1>
 				<div className="flex justify-center">
 					<table className="m-8 min-w-[50%] bg-white justify-center border-gray-300 shadow-sm rounded-lg">
-						<tbody className="flex justify-center divide-y pb-4">
-							<Loader />
+						<tbody>
+							<tr>
+								<td>
+									<Loader />
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -60,15 +65,20 @@ const TeamList = () => {
 					<tbody className="grid grid-cols-3 gap-5 p-8 divide-y">
 						{teamData.map((team) => (
 							<tr key={team.id}>
-								<td className="flex items-center gap-x-2 border-2 bg-slate-200 border-green-950 py-3 px-4 rounded">
-									<div className="max-w-[10vh] flex items-center aspect-[4/3] object-contain mr-2">
-										<img src={team.imageUrl} alt="serie logo" />
-									</div>
-									<div>
-										<span className="text-gray-700 text-lg font-medium whitespace-nowrap">
-											{team.name}
-										</span>
-									</div>
+								<td>
+									<Link
+										to={`/team/${team.id}`}
+										className="flex items-center gap-x-2 border-2 bg-slate-200 border-green-950 py-3 px-4 rounded"
+									>
+										<div className="max-w-[10vh] flex items-center aspect-[4/3] object-contain mr-2">
+											<img src={team.imageUrl} alt="serie logo" />
+										</div>
+										<div>
+											<span className="text-gray-700 text-lg font-medium whitespace-nowrap">
+												{team.name}
+											</span>
+										</div>
+									</Link>
 								</td>
 							</tr>
 						))}
