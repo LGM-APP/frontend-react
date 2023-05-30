@@ -18,7 +18,7 @@ const Navbar = () => {
 	const logo = process.env.PUBLIC_URL + "/logo.png";
 
 	const navigation = [
-		{ title: "Équipes", path: "#", icon: faPeopleGroup },
+		{ title: "Équipes", path: "/teams", icon: faPeopleGroup },
 		{ title: "Compétitions", path: "/competitions", icon: faTrophy },
 		{ title: "Suivis", path: "#", icon: faStarHalfStroke },
 		{ title: "Mini-jeux", path: "#", icon: faPuzzlePiece },
