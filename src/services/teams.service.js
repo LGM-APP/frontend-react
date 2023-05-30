@@ -9,7 +9,7 @@ const getTeamData = async (page) => {
 			"Erreur lors de la récupération des données d'équipe :",
 			error
 		);
-		return [];
+		return { teams: [], totalPages: 0 };
 	}
 };
 
