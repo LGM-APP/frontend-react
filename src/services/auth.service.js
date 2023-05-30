@@ -4,6 +4,10 @@ const save_token = (token) => {
     localStorage.setItem("auth_token", token);
 }
 
+const get_token = () => {
+    return localStorage.getItem("auth_token");
+}
+
 const register = (credentials) => {
     return Axios.post("/user/register", credentials)
 }
@@ -22,5 +26,5 @@ const is_logged = () => {
 
 
 export const auth_service = {
-    save_token, is_logged, logout, register, login
+    save_token, get_token, is_logged, logout, register, login
 }
