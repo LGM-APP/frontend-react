@@ -11,9 +11,6 @@ import Homepage from "./components/home/Homepage";
 import TeamList from "./components/teams/teamlist/Teamlist";
 import Teamdetails from "./components/teams/teamdetails/Teamdetails";
 
-
-
-
 export default function App() {
 	return (
 		<div className="App bg-gray-200">
