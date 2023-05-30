@@ -8,7 +8,8 @@ import Logout from "./components/authentication/logout/Logout";
 
 import Complist from "./components/competitions/Complist";
 import Homepage from "./components/home/Homepage";
-import TeamList from "./teams/teamlist/Teamlist";
+import TeamList from "./components/teams/teamlist/Teamlist";
+
 
 
 

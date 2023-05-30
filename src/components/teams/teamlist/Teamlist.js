@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { team_service } from "../../services/teams.service";
-import Pagination from "../../components/pagination/Pagination";
-import Loader from "../../components/loader/Loader";
+import { team_service } from "../../../services/teams.service";
+import Pagination from "../../pagination/Pagination";
+import Loader from "../../loader/Loader";
 
 const TeamList = () => {
 	const [teamData, setTeamData] = useState([]);
