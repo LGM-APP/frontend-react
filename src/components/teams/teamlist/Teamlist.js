@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 const TeamList = () => {
 	const [teamData, setTeamData] = useState([]);
-	const [currentPage, setCurrentPage] = useState(0);
+	const [currentPage, setCurrentPage] = useState(1);
 	const [totalPages, setTotalPages] = useState(0);
 
 	useEffect(() => {
 		const fetchTeamData = async () => {
 			try {
-				const { teams, totalPages } = await team_service.getTeamData(
+				const { teams, totalPages } = await team_service.getAllTeamsData(
 					currentPage
 				);
 				setTeamData(teams);

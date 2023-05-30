@@ -1,6 +1,6 @@
 import Axios from "./api.service";
 
-const getTeamData = async (page) => {
+const getAllTeamsData = async (page) => {
 	try {
 		const response = await Axios.get(`/team/page/${page}`);
 		return response.data;
@@ -13,4 +13,4 @@ const getTeamData = async (page) => {
 	}
 };
 
-export const team_service = { getTeamData };
+export const team_service = { getAllTeamsData };
