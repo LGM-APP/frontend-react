@@ -56,7 +56,7 @@ const TeamList = () => {
 	}
 
 	return (
-		<div className="container min-w-min border-2 border-pink-600 mx-auto">
+		<div className="container min-w-min mx-auto">
 			<h1 className="text-4xl font-bold pt-4 pb-4 pl-64">
 				Liste des équipes
 			</h1>
@@ -65,7 +65,7 @@ const TeamList = () => {
 					<tbody className="grid grid-cols-3 gap-5 p-8 divide-y">
 						{teamData.map((team) => (
 							<tr key={team.id}>
-								<td className="flex gap-x-2 border-2 bg-slate-200 border-green-950 py-3 px-4 rounded">
+								<td className="flex gap-x-2 border-2 bg-slate-200 border-cyan-950 py-3 px-4 rounded">
 									<Link
 										to={{
 											pathname: `/team/${team.name}`,
