@@ -3,7 +3,6 @@ import Axios from "./api.service";
 const getUserData = async () => {
 	try {
 		const response = await Axios.get("/user/get", { headers: { requiresAuth: true } });
-        console.log(response.data);
 		return response.data;
 	} catch (error) {
 		console.error(
