@@ -4,7 +4,7 @@ import TeamVitalityLogo from "./Team_Vitality_logo.png";
 import { BetContext } from "../../BetContext";
 import Pagination from "../../pagination/Pagination"; // Import du composant de pagination
 
-const ITEMS_PER_PAGE = 2; // Nombre d'éléments à afficher par page
+const ITEMS_PER_PAGE = 7; // Nombre d'éléments à afficher par page
 
 const Betlist = () => {
 	const { setBets, setTotalOdds } = useContext(BetContext);
