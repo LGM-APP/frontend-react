@@ -39,7 +39,9 @@ const Betlist = () => {
 					<div className="text-center items-center border-yellow-700">
 						<div className="text-lg font-bold uppercase">
 							<p>
-								{match.tournament && match.tournament.serie.fullName}
+								{match.tournament && match.tournament.serie.leagueId.name}{" - "}
+								{match.tournament && match.tournament.serie.fullName}{" : "}
+								{match.tournament && match.tournament.name}
 							</p>
 							<p>{match.beginAt}</p>
 						</div>
