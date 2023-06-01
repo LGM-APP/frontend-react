@@ -30,10 +30,10 @@ const Betlist = () => {
 
 	return (
 		<div className="grid gap-y-4 p-4 bg-white border border-cyan-950 rounded">
-			<h2 className="text-lg font-semibold">Paris en cours</h2>
+			<h2 className="text-lg font-semibold">Matchs à venir</h2>
 			{matches.map((match, index) => (
 				<div
-					className="flex justify-center items-center border border-cyan-950 bg-slate-200 rounded p-2"
+					className="flex justify-center items-center border border-cyan-950 bg-slate-200 rounded p-2 pb-4"
 					key={index}
 				>
 					<div className="text-center items-center border-yellow-700">
@@ -41,7 +41,7 @@ const Betlist = () => {
 							<p>
 								{match.tournament && match.tournament.serie.fullName}
 							</p>
-							<p>{match.status}</p>
+							<p>{match.beginAt}</p>
 						</div>
 
 						<div className="grid grid-cols-3 gap-2 items-center">
@@ -49,31 +49,29 @@ const Betlist = () => {
 								<div className="w-[40%]">
 									<img
 										className="w-full h-full"
-										src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Karmine_Corp_logo.svg/600px-Karmine_Corp_logo.svg.png"
-										alt="Logo Karmine Corp"
+										src={match.home && match.home.imageUrl}
+										alt="Logo home team"
 									/>
 								</div>
 								<p className="text-lg font-bold pl-6">
-									{/* {match.home && match.home.name} */}
-									Équipe 1
+									{match.home && match.home.name}
 								</p>
 							</div>
 							<div className="flex-row items-center justify-center">
 								<p className=" text-6xl font-bold pb-2">VS</p>
 								<p className=" text-sm font-semibold uppercase">
-									{match.matchType} {match.numberOfGames}
+									{match.matchType.replace("_", " ")} {match.numberOfGames}
 								</p>
 							</div>
 							<div className="flex items-center justify-end pr-6 border-green-600">
 								<p className="text-lg font-bold pr-6">
-									{/* {match.away && match.away.name} */}
-									Équipe 2
+									{match.away && match.away.name}
 								</p>
 								<div className="w-[40%]">
 									<img
 										className="w-full h-full"
-										src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Team_Vitality_logo_2023.png"
-										alt="Logo Team Vitality"
+										src={match.away && match.away.imageUrl}
+										alt="Logo away team"
 									/>
 								</div>
 							</div>
