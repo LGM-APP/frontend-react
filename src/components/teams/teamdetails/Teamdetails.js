@@ -19,7 +19,7 @@ const Teamdetails = () => {
         }
 
         fetch_data();
-    }, []);
+    }, [id]);
 
     if (matchs.length === 0 && players.length === 0) {
         return (
