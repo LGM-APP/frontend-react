@@ -12,7 +12,8 @@ const Profilepage = () => {
 				const userData = await user_service.getUserData();
 				setUserData(userData);
 
-				const betList = await bet_service.getBet();
+				const betList = await bet_service.getBet(1);
+				console.log(betList.data.series);
 				setBetList(betList);
 			} catch (error) {
 				console.error(
@@ -51,9 +52,9 @@ const Profilepage = () => {
 			</div>
 			<div className="w-1/2 bg-gray-100 p-4">
 				<h2 className="text-2xl font-semibold mb-4">Liste des paris</h2>
-				{betList.length > 0 ? (
+				{betList.data.series.length > 0 ? (
 					<ul>
-						{betList.map((bet) => (
+						{betList.data.series.map((bet) => (
 							<li key={bet.id}>
 								<p>
 									<span className="font-semibold">Match ID :</span>{" "}
