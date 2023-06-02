@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { BetContext } from "../../BetContext";
@@ -43,24 +43,24 @@ const Cart = () => {
 		setIsConfirmationOpen(true);
 	};
 
-	const handleConfirmAddBet = () => {
-		handleClearCart();
-		bets.map((bet) => {
-			bet_service
-				.addBet({
-					matchID: bet.id,
-					betTeamID: bet.team_id,
-					amount: stake,
-				})
-				.then((res) => {
-					console.log(res);
-				})
-				.catch((err) => {
-					console.log(err);
-				});
-		});
-		setIsConfirmationOpen(false);
-	};
+  const handleConfirmAddBet = () => {
+    handleClearCart();
+    bets.forEach((bet) => {
+      bet_service
+        .addBet({
+          matchID: bet.id,
+          betTeamID: bet.team_id,
+          amount: stake,
+        })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    });
+    setIsConfirmationOpen(false);
+  };
 
 	const handleCancelAddBet = () => {
 		setIsConfirmationOpen(false);
