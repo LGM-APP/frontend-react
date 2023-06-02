@@ -10,6 +10,7 @@ import Complist from "./components/competitions/Complist";
 import Homepage from "./components/home/Homepage";
 import TeamList from "./components/teams/teamlist/Teamlist";
 import Teamdetails from "./components/teams/teamdetails/Teamdetails";
+import Tournamentlist from "./components/home/sidebar/components/tournamentlist/Tournamentlist";
 
 export default function App() {
 	return (
@@ -36,6 +37,7 @@ export default function App() {
 									<Route path="/competitions" element={<Complist />} />
 									<Route path="/teams" element={<TeamList />} />
 									<Route path="/team/:id" element={<Teamdetails />} />
+									<Route path="/competition/:id" element={<Tournamentlist />} />
 								</Routes>
 							</>
 						}

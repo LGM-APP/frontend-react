@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { series_service } from "../../../services/series.service";
 import Loader from "../../loader/Loader";
 import { truncateText } from "../../../utils/utils";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
 	const [loading, setLoading] = useState(true);
@@ -102,7 +103,8 @@ const Sidebar = () => {
 												className="border-b-2 border-cyan-950 hover:border-cyan-600 pt-2 pb-2"
 												key={index}
 											>
-												<a
+												<Link
+													to={"competition/" + serie.id}
 													title={
 														serie["leagueId"]["name"] +
 														" : " +
@@ -117,7 +119,7 @@ const Sidebar = () => {
 															serie["fullName"],
 														38
 													)}
-												</a>
+												</Link>
 											</li>
 										);
 									})}
