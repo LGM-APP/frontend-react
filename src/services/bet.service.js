@@ -6,8 +6,8 @@ const addBet = (bet) => {
     return Axios.post(url, null, { headers: { requiresAuth: true } });
   };
  
-const getBet = () => {
-	return Axios.get("/bet/get", { headers: { requiresAuth: true } });
+const getBet = (page) => {
+	return Axios.get(`/bet/get/${page}`, { headers: { requiresAuth: true } });
 };
 
 export const bet_service = { addBet, getBet };
