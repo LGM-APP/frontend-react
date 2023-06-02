@@ -37,7 +37,7 @@ const Betlist = () => {
 		<div className="grid gap-y-4 p-4 bg-white border border-cyan-950 rounded">
 			<h2 className="text-lg font-semibold">Matchs à venir</h2>
 			{matches.map((match, index) => (
-				<Matchcard match={match} index={index} />
+				<Matchcard key={match.id} match={match} index={index} />
 			))}
 			<Pagination
 				currentPage={currentPage}
