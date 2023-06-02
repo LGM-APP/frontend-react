@@ -67,10 +67,7 @@ const TeamList = () => {
 							<tr key={team.id}>
 								<td className="flex gap-x-2 border-2 bg-slate-200 border-cyan-950 py-3 px-4 rounded">
 									<Link
-										to={{
-											pathname: `/team/${team.name}`,
-											state: { team },
-										}}
+										to={`/team/${team.id}`}
 										className="flex items-center"
 									>
 										<div className="max-w-[10vh] flex items-center aspect-[4/3] object-contain mr-2">

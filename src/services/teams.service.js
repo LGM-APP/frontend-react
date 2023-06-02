@@ -13,4 +13,17 @@ const getAllTeamsData = async (page) => {
 	}
 };
 
-export const team_service = { getAllTeamsData };
+const getPlayerByTeamId = async (id) => {
+	try {
+		const response = await Axios.get(`/player/${id}`);
+		return response.data;
+	} catch (error) {
+		console.error(
+			"Erreur lors de la récupération des données d'équipe :",
+			error
+		);
+		return [];
+	}
+};
+
+export const team_service = { getAllTeamsData, getPlayerByTeamId };
