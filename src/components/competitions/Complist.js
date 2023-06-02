@@ -1,38 +1,38 @@
-import React from "react";
-import ComplistTable from "./ComplistTable";
-import Filter from "./Filter";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { comp_service } from "../../services/comp.service";
 
 const Complist = () => {
-	const [tableItems, setTableItems] = useState([]);
+  const [compData, setCompData] = useState({ series: [], totalPages: 0 });
 
-	useEffect(() => {
-		const fetchTournaments = async () => {
-			try {
-				const games = ["valorant", "lol"];
-				const data = await comp_service.getCompetitionsByGames(games);
-				setTableItems(data);
-				console.log(data);
-			} catch (error) {
-				console.error(
-					"Une erreur s'est produite lors de la récupération des compétitions :",
-					error
-				);
-			}
-		};
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await comp_service.getAllCompData(1);
+        setCompData(data);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des données d'équipe :", error);
+        setCompData({ series: [], totalPages: 0 });
+      }
+    };
 
-		fetchTournaments();
-	}, []);
-	return (
-		<div className="flex flex-col min-h-screen m-auto border border-black  lg:w-[80%] xl:w-[70%] md:w-[91%] sm:w-full mt-6">
-			<h2 className="text-gray-800 font-bold text-4xl">Compétitions</h2>
-			<div className="flex justify-center px-4 pb-4 gap-x-[6vh] ">
-				<ComplistTable tableItems={tableItems} />
-				<Filter />
-			</div>
-		</div>
-	);
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Informations de la route</h1>
+      {compData.series.map((serie) => (
+        <div key={serie.id}>
+          <h2>Nom de la série : {serie.fullName}</h2>
+          <p>Date de début : {serie.beginAt}</p>
+          <p>Date de fin : {serie.endAt}</p>
+          <hr />
+        </div>
+      ))}
+    </div>
+
+	
+  );
 };
 
 export default Complist;

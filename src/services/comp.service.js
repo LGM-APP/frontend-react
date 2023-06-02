@@ -1,23 +1,16 @@
 import Axios from "./api.service";
 
-const getCompetitionByGame = (game) => {
-	return Axios.get(`/tournaments/${game}`)
-		.then((response) => response.data)
-		.catch((error) => {
-			console.error(
-				"Une erreur s'est produite lors de la récupération des compétitions :",
-				error
-			);
-			throw error;
-		});
+const getAllCompData = async (page) => {
+	try {
+		const response = await Axios.get(`/series/all/${page}`);
+		return response.data;
+	} catch (error) {
+		console.error(
+			"Erreur lors de la récupération des données d'équipe :",
+			error
+		);
+		return { comp: [], totalPages: 0 };
+	}
 };
 
-const getCompetitionsByGames = async (games) => {
-	const promises = games.map((game) => getCompetitionByGame(game));
-	const results = await Promise.all(promises);
-	return results.flat();
-};
-
-export const comp_service = {
-	getCompetitionByGame,	getCompetitionsByGames,
-};
+export const comp_service = { getAllCompData };
