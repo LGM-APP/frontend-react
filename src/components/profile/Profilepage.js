@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { bet_service } from "../../services/bet.service";
 import { user_service } from "../../services/user.service";
+import Loader from "../loader/Loader";
 
 const Profilepage = () => {
 	const [userData, setUserData] = useState(null);
@@ -9,12 +10,12 @@ const Profilepage = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const userData = await user_service.getUserData();
-				setUserData(userData);
+				const userinfo = await user_service.getUserData();
+				setUserData(userinfo);
 
-				const betList = await bet_service.getBet(1);
-				console.log(betList.data.series);
-				setBetList(betList);
+				const betData = await bet_service.getBet(1);
+				setBetList(betData.data);
+				console.log(betList);
 			} catch (error) {
 				console.error(
 					"Erreur lors de la récupération des données :",
@@ -23,7 +24,7 @@ const Profilepage = () => {
 			}
 		};
 		fetchData();
-	}, []);
+	}, [betList]);
 
 	return (
 		<div className="flex">
@@ -47,14 +48,14 @@ const Profilepage = () => {
 						</p>
 					</div>
 				) : (
-					<p>Chargement des données utilisateur...</p>
+					<Loader />
 				)}
 			</div>
 			<div className="w-1/2 bg-gray-100 p-4">
 				<h2 className="text-2xl font-semibold mb-4">Liste des paris</h2>
-				{betList.data.series.length > 0 ? (
+				{betList.series && betList.series.length > 0 ? (
 					<ul>
-						{betList.data.series.map((bet) => (
+						{betList.series.map((bet) => (
 							<li key={bet.id}>
 								<p>
 									<span className="font-semibold">Match ID :</span>{" "}
@@ -76,7 +77,7 @@ const Profilepage = () => {
 						))}
 					</ul>
 				) : (
-					<p>Aucun pari trouvé.</p>
+					<Loader />
 				)}
 			</div>
 		</div>
