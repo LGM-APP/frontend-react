@@ -15,7 +15,6 @@ const Profilepage = () => {
 
 				const betData = await bet_service.getBet(1);
 				setBetList(betData.data);
-				console.log(betList);
 			} catch (error) {
 				console.error(
 					"Erreur lors de la récupération des données :",
