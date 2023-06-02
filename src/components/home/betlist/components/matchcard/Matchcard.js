@@ -5,12 +5,12 @@ import { BetContext } from "../../../../BetContext";
 const Matchcard = ({ match, index }) => {
 	const { bets, setBets, setTotalOdds } = useContext(BetContext);
 
-	const handleAddBet = (id, team, odds) => {
+	const handleAddBet = (id, team_id, team, odds) => {
         if (bets.some((bet) => (bet.id === id))) {
             return;
         }
-		setBets((prevBets) => [...prevBets, { id, team, odds }]);
-		setTotalOdds((prevOdds) => prevOdds + odds);
+		setBets((prevBets) => [...prevBets, { id, team_id, team, odds }]);
+		setTotalOdds((prevOdds) => prevOdds * odds);
 	};
 
 	return (
@@ -47,7 +47,7 @@ const Matchcard = ({ match, index }) => {
 						<p
 							className="bg-blue-500 hover:bg-blue-700 text-white font-semibold p-1 rounded text-center cursor-pointer"
 							onClick={() =>
-								handleAddBet(match.id ,match.home.name, match.homeOdd)
+								handleAddBet(match.id,  match.home.id,match.home.name, match.homeOdd)
 							}
 						>
 							Cote: {match.homeOdd}
@@ -62,7 +62,7 @@ const Matchcard = ({ match, index }) => {
 						<p
 							className="bg-blue-500 hover:bg-blue-700 text-white font-semibold p-1 rounded text-center cursor-pointer"
 							onClick={() =>
-								handleAddBet(match.id ,match.away.name, match.awayOdd)
+								handleAddBet(match.id, match.away.id ,match.away.name, match.awayOdd)
 							}
 						>
 							Cote: {match.awayOdd}
