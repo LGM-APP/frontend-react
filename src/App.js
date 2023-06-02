@@ -11,6 +11,7 @@ import Homepage from "./components/home/Homepage";
 import TeamList from "./components/teams/teamlist/Teamlist";
 import Teamdetails from "./components/teams/teamdetails/Teamdetails";
 import Tournamentlist from "./components/home/sidebar/components/tournamentlist/Tournamentlist";
+import Profilepage from "./components/profile/Profilepage";
 
 export default function App() {
 	return (
@@ -34,10 +35,14 @@ export default function App() {
 											</div>
 										}
 									/>
+									<Route path="/profile" element={<Profilepage />} />
 									<Route path="/competitions" element={<Complist />} />
 									<Route path="/teams" element={<TeamList />} />
 									<Route path="/team/:id" element={<Teamdetails />} />
-									<Route path="/competition/:id" element={<Tournamentlist />} />
+									<Route
+										path="/competition/:id"
+										element={<Tournamentlist />}
+									/>
 								</Routes>
 							</>
 						}
