@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-// import { BetContext } from "../../BetContext";
 import Pagination from "../../pagination/Pagination";
 import { matchs_service } from "../../../services/matchs.service";
 import Matchcard from "./components/matchcard/Matchcard";
 import Loader from "../../loader/Loader";
 
 const Betlist = () => {
-	//   const { setBets, setTotalOdds } = useContext(BetContext);
+
 	const [currentPage, setCurrentPage] = useState(1);
 	const [matches, setMatches] = useState([]);
 	const [totalPages, setTotalPages] = useState(0);
@@ -25,10 +24,6 @@ const Betlist = () => {
 		fetchMatchData();
 	}, [currentPage]);
 
-	//   const handleAddBet = (team, odds) => {
-	//     setBets((prevBets) => [...prevBets, { team, odds }]);
-	//     setTotalOdds((prevOdds) => prevOdds + odds);
-	//   };
 
 	if (matches.length === 0) {
 		return (
