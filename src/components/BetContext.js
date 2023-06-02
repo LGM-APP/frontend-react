@@ -4,7 +4,7 @@ export const BetContext = createContext();
 
 export const BetProvider = ({ children }) => {
   const [bets, setBets] = useState([]);
-  const [totalOdds, setTotalOdds] = useState(0);
+  const [totalOdds, setTotalOdds] = useState(1);
 
   return (
     <BetContext.Provider value={{ bets, setBets, totalOdds, setTotalOdds }}>
