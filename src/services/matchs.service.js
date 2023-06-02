@@ -25,5 +25,19 @@ const getMatchsByTeamId = async (id) => {
 		return [];
 	}
 };
-export const matchs_service = { getAllMatchs, getMatchsByTeamId };
+
+const getMatchsByTournamentId = async (id) => {
+	try {
+		const response = await Axios.get(`/matchs/tournament/${id}`);
+		return response.data;
+	} catch (error) {
+		console.error(
+			"Erreur lors de la récupération des données d'équipe :",
+			error
+		);
+		return [];
+	}
+};
+
+export const matchs_service = { getAllMatchs, getMatchsByTeamId, getMatchsByTournamentId };
 
