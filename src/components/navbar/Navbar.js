@@ -22,7 +22,7 @@ const Navbar = () => {
 		{ title: "Équipes", path: "/teams", icon: faPeopleGroup },
 		{ title: "Compétitions", path: "/competitions", icon: faTrophy },
 		{ title: "Suivis", path: "#", icon: faStarHalfStroke },
-		{ title: "Mini-jeux", path: "#", icon: faPuzzlePiece },
+		{ title: "Mini-jeux", path: "/games", icon: faPuzzlePiece },
 	];
 	const profileNavigation = [
 		{ title: "Profil", path: "/profile" },

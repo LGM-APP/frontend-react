@@ -1,0 +1,209 @@
+[
+    {
+      "text": "Le mage le plus puissant dans le lore de League of Legends",
+      "answers": [
+        {
+          "text": "Pewdipie",
+          "isCorrect": false
+        },
+        {
+          "text": "Lissandra",
+          "isCorrect": false
+        },
+        {
+          "text": "Velkoz",
+          "isCorrect": false
+        },
+        {
+          "text": "Xerath",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "text": "Qui a été désigné meilleur joueur du monde sur CS:GO en 2022 ?",
+      "answers": [
+        {
+          "text": "Oleksandr \"⁠s1mple⁠\" Kostyliev",
+          "isCorrect": true
+        },
+        {
+          "text": "Dmitry \"⁠sh1ro⁠\" Sokolov",
+          "isCorrect": false
+        },
+        {
+          "text": "Mathieu \"⁠ZywOo⁠\" Herbaut",
+          "isCorrect": false
+        },
+        {
+          "text": "Ilya \"m0NESY\" Osipov",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Quel est le capitaine de l'équipe KCorp sur LoL à l'heure actuelle",
+      "answers": [
+        {
+          "text": "ScreaM",
+          "isCorrect": false
+        },
+        {
+          "text": "Saken",
+          "isCorrect": false
+        },
+        {
+          "text": "Cabochad",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "text": "Quel joueur vient de faire son départ dans l'équipe Kcorp de Valorant",
+      "answers": [
+        {
+          "text": "Zeish",
+          "isCorrect": false
+        },
+        {
+          "text": "ScreaM",
+          "isCorrect": false
+        },
+        {
+          "text": "Newzera",
+          "isCorrect": true
+        },
+        {
+          "text": "Pm",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Quelle équipe vient de remporter les Paris Major 2023 sur CS:GO",
+      "answers": [
+        {
+          "text": "Vitality",
+          "isCorrect": true
+        },
+        {
+          "text": "G2",
+          "isCorrect": false
+        },
+        {
+          "text": "NIP",
+          "isCorrect": false
+        },
+        {
+          "text": "NAVI",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Quel est le nom de la carte principale utilisée pour les parties classées de League of Legends ?",
+      "answers": [
+        {
+          "text": "La Faille de l'invocateur",
+          "isCorrect": true
+        },
+        {
+          "text": "Le Néant",
+          "isCorrect": false
+        },
+        {
+          "text": "L'Arène de Cristal",
+          "isCorrect": false
+        },
+        {
+          "text": "La Fosse abyssale",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Quel est le nom de la compétition annuelle de League of Legends qui réunit les meilleures équipes du monde ?",
+      "answers": [
+        {
+          "text": "LCS",
+          "isCorrect": false
+        },
+        {
+          "text": "MSI",
+          "isCorrect": false
+        },
+        {
+          "text": "Worlds",
+          "isCorrect": true
+        },
+        {
+          "text": "Rift Rivals",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Quelle est la carte la plus emblématique de Counter-Strike: Global Offensive (CS:GO) ?",
+      "answers": [
+        {
+          "text": "Nuke",
+          "isCorrect": false
+        },
+        {
+          "text": "Dust 2",
+          "isCorrect": true
+        },
+        {
+          "text": "Inferno",
+          "isCorrect": false
+        },
+        {
+          "text": "Mirage",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Parmis ces 4 armes, quelle est la plus couteuse sur CS:GO ?",
+      "answers": [
+        {
+          "text": "Ak-47",
+          "isCorrect": false
+        },
+        {
+          "text": "M4A4",
+          "isCorrect": false
+        },
+        {
+          "text": "Desert Eagle",
+          "isCorrect": false
+        },
+        {
+          "text": "AWP",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "text": "Quelle est la capacité ultime de l'agent \"Sage\" dans le jeu Valorant ?",
+      "answers": [
+        {
+          "text": "Créer un mur de glace",
+          "isCorrect": false
+        },
+        {
+          "text": "Ressusciter un allié mort",
+          "isCorrect": true
+        },
+        {
+          "text": "Se téléporter sur de courtes distances",
+          "isCorrect": false
+        },
+        {
+          "text": "Lancer une boule de feu explosive",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+  
