@@ -1,0 +1,22 @@
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#canvas{
+    background-color: aliceblue;
+    height: 600px;
+    width: 600px;
+    border: darkgreen solid 3px;
+}
+
+button#startButton, button#resetButton {
+    width: 50px;
+    border-radius: 5px;
+}
+
+button#startButton:hover, button#resetButton:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
