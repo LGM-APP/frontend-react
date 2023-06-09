@@ -2,7 +2,7 @@ import axios from "axios";
 import { auth_service } from "./auth.service";
 
 const Axios = axios.create({
-	baseURL: "http://http://13.50.130.143:8080/",
+	baseURL: "http://13.50.130.143:8080",
 });
 
 Axios.interceptors.request.use(
