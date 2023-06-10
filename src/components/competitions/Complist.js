@@ -23,7 +23,7 @@ const Complist = () => {
 
   return (
     <div>
-      <h1 className="text-6xl">Informations de la route</h1>
+      <h1 className="text-4xl font-bold pt-4 pb-4 pl-64">Liste des compétitions</h1>
       <ComplistTable series={compData.series} />
       <Pagination
         currentPage={currentPage}
