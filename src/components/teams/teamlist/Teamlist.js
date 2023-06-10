@@ -3,6 +3,7 @@ import { team_service } from "../../../services/teams.service";
 import Pagination from "../../pagination/Pagination";
 import Loader from "../../loader/Loader";
 import { Link } from "react-router-dom";
+import FavButton from "../../home/betlist/components/favbutton/Favbutton";
 
 const TeamList = () => {
 	const [teamData, setTeamData] = useState([]);
@@ -66,6 +67,7 @@ const TeamList = () => {
 						{teamData.map((team) => (
 							<tr key={team.id}>
 								<td className="flex gap-x-2 border-2 bg-slate-200 border-cyan-950 py-3 px-4 rounded">
+									<FavButton teamId={team.id} />
 									<Link
 										to={`/team/${team.id}`}
 										className="flex items-center"
