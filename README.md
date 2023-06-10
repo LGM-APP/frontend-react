@@ -1,6 +1,6 @@
 # Projet - Groupe LGM : Frontend - ReactJS CRUD Application
 
-## Lancement de l'application React avec backend Express
+## Lancement de l'application ReactJS
 
 Voici les étapes pour lancer l'application React :
 
