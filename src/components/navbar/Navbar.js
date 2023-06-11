@@ -21,7 +21,7 @@ const Navbar = () => {
 	const navigation = [
 		{ title: "Équipes", path: "/teams", icon: faPeopleGroup },
 		{ title: "Compétitions", path: "/competitions", icon: faTrophy },
-		{ title: "Suivis", path: "#", icon: faStarHalfStroke },
+		{ title: "Suivis", path: "/favorite", icon: faStarHalfStroke },
 		{ title: "Mini-jeux", path: "/games", icon: faPuzzlePiece },
 	];
 	const profileNavigation = [

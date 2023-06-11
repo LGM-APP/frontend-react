@@ -16,6 +16,7 @@ import Mainpage from "./components/games/mainpage/Mainpage";
 import Clicu from "./components/games/clicu/Clicu";
 import Snaku from "./components/games/snaku/Snaku";
 import Quizu from "./components/games/quizu/Quizu";
+import Favorite from "./components/favorite/Favorite";
 
 export default function App() {
 	return (
@@ -44,13 +45,11 @@ export default function App() {
 									<Route path="/game/snaku" element={<Snaku />} />
 									<Route path="/game/quizu" element={<Quizu />} />
 									<Route path="/profile" element={<Profilepage />} />
+									<Route path="/favorite" element={<Favorite />} />
 									<Route path="/competitions" element={<Complist />} />
 									<Route path="/teams" element={<TeamList />} />
 									<Route path="/team/:id" element={<Teamdetails />} />
-									<Route
-										path="/competition/:id"
-										element={<Tournamentlist />}
-									/>
+									<Route path="/competition/:id" element={<Tournamentlist />} />
 								</Routes>
 							</>
 						}
