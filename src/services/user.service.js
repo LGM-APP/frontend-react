@@ -13,4 +13,18 @@ const getUserData = async () => {
 	}
 };
 
-export const user_service = { getUserData };
+const getUsersRanking = async () => {
+	try {
+		const response = await Axios.get("/user/ranking", { headers: { requiresAuth: true } });
+		return response.data;
+	} catch (error) {
+		console.error(
+			"Erreur lors de la récupération des données utilisateur :",
+			error
+		);
+		throw error;
+	}
+};
+
+
+export const user_service = { getUserData, getUsersRanking };
