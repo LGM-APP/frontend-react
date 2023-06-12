@@ -14,7 +14,7 @@ import Axios from "./api.service";
 	};	
 
 const deleteFavoriteTeam = (teamId) =>
-	Axios.post("/favoritesTeam/delete", { idTeam: teamId }, { headers: { requiresAuth: true } });
+	Axios.post("/favoritesTeam/delete", [{ idTeam: teamId }], { headers: { requiresAuth: true } });
 
 const getFavoriteTeams = () =>
 	Axios.get("/favoritesTeam/get", { headers: { requiresAuth: true } });
