@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import questionsData from "./questionsData.json";
 
 const Quizu = () => {
@@ -8,28 +8,19 @@ const Quizu = () => {
   const [isQuizEnd, setIsQuizEnd] = useState(false);
 
   const currentQuestion = questionsData[currentQuestionIndex];
-  
-  useEffect(() => {
-    if (selectedAnswer) {
-      if (selectedAnswer.isCorrect) setScore((prevScore) => prevScore + 1);
-
-      if (currentQuestionIndex < questionsData.length - 1) {
-        setTimeout(() => {
-          setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-        }, 1000); // Temps d'attente en millisecondes
-      } else {
-        setIsQuizEnd(true);
-      }
-      
-      // Clear selected answer
-      setTimeout(() => {
-        setSelectedAnswer(null);
-      }, 1000);
-    }
-  }, [selectedAnswer, currentQuestionIndex]);
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
+    if (answer.isCorrect) setScore((prevScore) => prevScore + 1);
+
+    setTimeout(() => {
+      if (currentQuestionIndex < questionsData.length - 1) {
+        setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+      } else {
+        setIsQuizEnd(true);
+      }
+      setSelectedAnswer(null);
+    }, 1000); // Temps d'attente en millisecondes
   };
 
   const restartQuiz = () => {
@@ -69,14 +60,15 @@ const Quizu = () => {
                 ${selectedAnswer 
                   ? answer === selectedAnswer 
                     ? answer.isCorrect 
-                      ? "bg-green-500 text-white" 
-                      : "bg-red-500 text-white"
+                      ? "bg-green-700 text-white" 
+                      : "bg-red-700 text-white"
                     : answer.isCorrect
-                      ? "bg-green-500 text-white" 
-                      : "bg-blue-500 text-white hover:bg-blue-700"
-                  : "bg-blue-500 text-white hover:bg-blue-700"
+                      ? "bg-green-700 text-white" 
+                      : "bg-cyan-950 text-white hover:bg-cyan-900"
+                  : "bg-cyan-950 text-white hover:bg-cyan-900"
               }`}
               onClick={() => handleAnswerClick(answer)}
+              disabled={selectedAnswer ? true : false}
             >
               {answer.text}
             </button>
