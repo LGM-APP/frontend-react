@@ -1,42 +1,31 @@
 #game-container {
-    position: relative;
-    width: 800px;
-    height: 800px;
-    border: 1px solid black;
-    margin-bottom: 10px;
+	position: relative;
+	width: 800px;
+	height: 800px;
+	border: 1px solid black;
+	margin-bottom: 10px;
 }
 
 .target {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: red;
-    border-radius: 50%;
-    cursor: pointer;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: red;
+	border-radius: 50%;
+	cursor: pointer;
 }
-
-#score {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#time {
-    font-size: 18px;
-}
-
 
 .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 2px solid black;
-    text-align: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px;
+	border: 2px solid black;
+	text-align: center;
 }
 
 .popup button {
-    margin-top: 10px;
+	margin-top: 10px;
 }
