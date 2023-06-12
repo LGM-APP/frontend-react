@@ -21,8 +21,8 @@ const Navbar = () => {
 	const navigation = [
 		{ title: "Équipes", path: "/teams", icon: faPeopleGroup },
 		{ title: "Compétitions", path: "/competitions", icon: faTrophy },
-		{ title: "Suivis", path: "/favorite", icon: faStarHalfStroke },
-		{ title: "Mini-jeux", path: "/games", icon: faPuzzlePiece },
+		{ title: "Suivis", path: "/favorite", icon: faStarHalfStroke, authenticated: true },
+		{ title: "Mini-jeux", path: "/games", icon: faPuzzlePiece, authenticated: true },
 	];
 	const profileNavigation = [
 		{ title: "Profil", path: "/profile" },
@@ -123,6 +123,9 @@ const Navbar = () => {
 				>
 					<ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
 						{navigation.map((item, idx) => {
+							if (item.authenticated && !isAuthenticated) {
+								return null;
+							}
 							return (
 								<li
 									key={idx}
