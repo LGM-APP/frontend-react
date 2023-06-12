@@ -31,7 +31,7 @@ const Teamdetails = () => {
     }
 
     return (
-        <div >
+        <div className="min-h-screen">
             <h1>Team Details</h1>
 
             <h2>Matchs</h2>

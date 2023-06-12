@@ -37,7 +37,7 @@ const TeamList = () => {
 
 	if (teamData.length === 0) {
 		return (
-			<div className="min-w-min mx-auto">
+			<div className="min-h-screen mt-12 mx-auto">
 				<h1 className="text-4xl font-bold pt-4 pb-4 pl-64">
 					Liste des équipes
 				</h1>
@@ -57,7 +57,7 @@ const TeamList = () => {
 	}
 
 	return (
-		<div className="min-w-min mx-auto">
+		<div className="min-h-screen mt-12 mx-auto">
 			<h1 className="text-4xl font-bold pt-4 pb-4 pl-64">
 				Liste des équipes
 			</h1>

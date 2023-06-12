@@ -17,10 +17,11 @@ import Clicu from "./components/games/clicu/Clicu";
 import Snaku from "./components/games/snaku/Snaku";
 import Quizu from "./components/games/quizu/Quizu";
 import Favorite from "./components/favorite/Favorite";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
 	return (
-		<div className="App bg-gray-200">
+		<div className="App bg-gray-200 min-h-screen">
 			<Router>
 				<Routes>
 					<Route path="/login" element={<Login />} />
@@ -51,6 +52,7 @@ export default function App() {
 									<Route path="/team/:id" element={<Teamdetails />} />
 									<Route path="/competition/:id" element={<Tournamentlist />} />
 								</Routes>
+								<Footer />
 							</>
 						}
 					/>

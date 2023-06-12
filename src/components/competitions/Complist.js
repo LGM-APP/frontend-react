@@ -22,7 +22,7 @@ const Complist = () => {
   }, [currentPage]);
 
   return (
-    <div>
+    <div className="min-h-screen">
       <h1 className="text-4xl font-bold pt-4 pb-4 pl-64">Liste des compétitions</h1>
       <ComplistTable series={compData.series} />
       <Pagination

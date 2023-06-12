@@ -16,6 +16,7 @@ const Profilepage = () => {
 
 				const betData = await bet_service.getBet(1);
 				setBetList(betData.data);
+				console.log(betData.data);
 
 				const rankData = await user_service.getUsersRanking();
 				setrankList(rankData);
@@ -30,7 +31,7 @@ const Profilepage = () => {
 	}, []);
 
 	return (
-		<div className="flex">
+		<div className="flex min-h-screen">
 			<div className="w-1/2 bg-gray-200 p-4">
 				<h2 className="text-2xl font-semibold mb-4">
 					Informations utilisateur
@@ -59,17 +60,13 @@ const Profilepage = () => {
 				{betList.series && betList.series.length > 0 ? (
 					<ul>
 						{betList.series.map((bet) => (
-							<li key={bet.id}>
+							<li className="py-2" key={bet.id}>
 								<p>
-									<span className="font-semibold">Match ID :</span>{" "}
-									{bet.matchId}
+									<span className="font-semibold">Nom :</span>{" "}
+									{bet.matchId.name}
 								</p>
 								<p>
-									<span className="font-semibold">Bet Team ID :</span>{" "}
-									{bet.betTeamId}
-								</p>
-								<p>
-									<span className="font-semibold">Montant :</span>{" "}
+									<span className="font-semibold">Mise :</span>{" "}
 									{bet.amount}
 								</p>
 								<p>
@@ -83,7 +80,7 @@ const Profilepage = () => {
 					<Loader />
 				)}
 			</div>
-			<div className="w-1/2 bg-gray-100 p-4">
+			<div className="w-1/2 bg-gray-200 p-4">
 				<h2 className="text-2xl font-semibold mb-4">Classement joueurs</h2>
 				{rankList && rankList.length > 0 ? (
 					<ul>

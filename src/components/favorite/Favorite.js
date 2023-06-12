@@ -26,7 +26,7 @@ const Favorite = () => {
 	}, [favList]);
 
     return (
-        <div className="bg-gray-100 p-4">
+        <div className="bg-gray-100 p-4 min-h-screen">
         <h2 className="text-2xl font-semibold mb-4">Liste des favoris</h2>
         {favList && favList.length > 0 && teamInfo ? (
             <ul>
