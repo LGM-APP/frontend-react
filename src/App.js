@@ -18,6 +18,7 @@ import Snaku from "./components/games/snaku/Snaku";
 import Quizu from "./components/games/quizu/Quizu";
 import Favorite from "./components/favorite/Favorite";
 import Footer from "./components/footer/Footer";
+import Memoryu from "./components/games/memoryu/Memoryu";
 
 export default function App() {
 	return (
@@ -45,6 +46,7 @@ export default function App() {
 									<Route path="/game/clicu" element={<Clicu />} />
 									<Route path="/game/snaku" element={<Snaku />} />
 									<Route path="/game/quizu" element={<Quizu />} />
+									<Route path="/game/memoryu" element={<Memoryu />} />
 									<Route path="/profile" element={<Profilepage />} />
 									<Route path="/favorite" element={<Favorite />} />
 									<Route path="/competitions" element={<Complist />} />
