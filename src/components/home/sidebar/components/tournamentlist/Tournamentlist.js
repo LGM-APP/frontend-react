@@ -36,7 +36,7 @@ const Tournamentlist = () => {
 	}, [id]);
 
 	return (
-		<div className="px-4 md:px-8 h-screen">
+		<div className="px-4 md:px-8 min-h-screen">
 			<div className="flex gap-8 w-full ">
 				{tournaments.map((tournament) => (
 					<div
