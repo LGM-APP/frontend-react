@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { truncateText } from "../../utils/utils";
 
 const ComplistTable = ({ series }) => {
 	return (
@@ -26,8 +27,8 @@ const ComplistTable = ({ series }) => {
 										/>
 									</div>
 									<div className="pl-4">
-										<span className="block text-gray-700 text-xs font-medium whitespace-nowrap">
-											{serie.leagueId.name}
+										<span className="block text-gray-700 text-xs font-semibold whitespace-nowrap" title={serie.leagueId.name}>
+											{truncateText(serie.leagueId.name, 20)}
 										</span>
 										<span className="block text-gray-500 text-xs font-medium whitespace-nowrap">
 											{serie.leagueId.videoGame.name}
@@ -36,7 +37,7 @@ const ComplistTable = ({ series }) => {
 								</Link>
 							</td>
 							<td className="py-2 px-4 whitespace-nowrap">
-								{serie.fullName}
+								{truncateText(serie.fullName, 20)}
 							</td>
 							<td className="py-2 px-4 whitespace-nowrap">
 								{serie.beginAt}
