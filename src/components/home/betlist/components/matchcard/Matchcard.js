@@ -32,7 +32,7 @@ const Matchcard = ({ match, index }) => {
 
 				<div className="grid grid-cols-3 gap-2 items-center">
 					<div className="flex items-center justify-start pl-6 border-pink-600">
-						<div className="w-[40%]">
+						<div className="w-[35%]">
 							<img
 								className="w-full h-full"
 								src={match.home && match.home.imageUrl}
