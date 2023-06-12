@@ -1,0 +1,24 @@
+.Memoryu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+.Memoryu .grid {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Memoryu .grid div {
+	display: flex;
+	justify-content: center;
+}
+
+.card,
+.Memoryu img {
+	width: 100px;
+	height: 100px;
+	margin: 2px;
+}
