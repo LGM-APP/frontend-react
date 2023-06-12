@@ -149,18 +149,19 @@ const SnakeGame = () => {
     }
 
     // creation des boutons
+    const gameContainer = document.getElementById('gameContainer');
     const startButton = document.createElement('button');
     startButton.textContent = 'Start';
     startButton.id = 'startButton';
     startButton.addEventListener('click', startGame);
-    document.body.appendChild(startButton);
+    gameContainer.appendChild(startButton);
 
     const resetButton = document.createElement('button');
     resetButton.textContent = 'Reset';
     resetButton.id = 'resetButton';
     resetButton.style.display = 'none';
     resetButton.addEventListener('click', resetGame);
-    document.body.appendChild(resetButton);
+    gameContainer.appendChild(resetButton);
 
     function resetGame() {
       lives = 3;
@@ -174,7 +175,16 @@ const SnakeGame = () => {
     };
   }, []);
 
-  return <canvas id="canvas" width="400" height="400"></canvas>;
+  return (
+    <div id="gameContainer" className="flex flex-col justify-center items-center min-h-screen">
+      <canvas
+        id="canvas"
+        width="400"
+        height="400"
+        className="bg-aliceblue border-3 border-darkgreen mb-4"
+      ></canvas>
+    </div>
+  );
 };
 
 export default SnakeGame;
